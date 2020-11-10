@@ -16,8 +16,12 @@ class count101 {
                     tally=1; // As the Matched String conatins the Index 0 of the Expected String.
                 }
             }
-            else
-                tally=0; // Break the Match Streak 
+            else {
+                if(i==49) // To Compensate for the Breakdown on Equal Start & End Character of the Expected String.
+                    tally=1;
+                else
+                    tally=0; // Break the Match Streak
+            }
         }
         reader.close(); // Closing the reader Object
         System.out.println("No. of 101's in the Given File is: "+counter); //Print Statement
