@@ -10,13 +10,13 @@ class SpellCheckV2
     public static void main(String[] args) throws IOException
     {
         BufferedReader br=new BufferedReader(new FileReader("sample.txt"));
-        FileWriter fw = new FileWriter("wrong.html",false);
         BufferedReader dict=new BufferedReader(new FileReader("dictionary.txt"));
-        loadDictionary(dict);
-        dict.close();
+        FileWriter fw = new FileWriter("wrong.html",false);
         String prefix = "<!DOCTYPE html>\n<html>\n<body>\n<h1>List of Incorrect Words in the Text</h1>\n<p style=\"color:red;\">\n";
         String suffix = "</p></body></html>";
         fw.write(prefix);
+        loadDictionary(dict);
+        dict.close();
         String in;
         while((in=br.readLine())!=null)
         {
