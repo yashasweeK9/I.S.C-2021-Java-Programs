@@ -4,6 +4,7 @@ public class ISC2016Q2 {
         Scanner sc = new Scanner(System.in);
         System.out.print("INPUT: M = ");
         int m = sc.nextInt();
+        System.out.print("OUTPUT: ");
         if(isValid(m)) {
             int matrix[][] = input_2D(sc, m);
             System.out.println("ORIGINAL MATRIX"+displayMatrix(matrix));
