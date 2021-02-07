@@ -2,11 +2,13 @@ import java.util.Scanner;
 public class ISC2016Q1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("INPUT : N = ");
         int input = sc.nextInt();
         String str = Integer.toString(input);
         int digits = str.length();
         str += str;
         boolean flag = true;
+        System.out.print("OUTPUT : ");
         for(int index=0;index<digits;index++){
             int copy = Integer.parseInt(str.substring(index, index+digits)); 
             if(!isPrimeNumber(copy))
